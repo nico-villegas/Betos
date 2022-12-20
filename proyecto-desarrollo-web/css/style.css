@@ -11,6 +11,9 @@
 
 header{
     background-color: #142b3b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 header a img{
     width: 200px;
@@ -18,10 +21,11 @@ header a img{
 }
 header nav ul{
     list-style: none;
+    display: flex;
+    margin-right: 30px;
 }
 
 header nav ul li{
-    display: inline-block;
     margin: 8px;
 }
 
@@ -50,7 +54,10 @@ main{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero h1{
@@ -63,19 +70,24 @@ main{
 }
 
 /**-------Index----------*/
+.contenedor-tarjetas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .productos h2{
     text-align: center;
     color: #e47c5d;
     margin: 20px;
 }
 
-.productos div{
+.contenedor-tarjetas div{
     border: 2px solid #ffcc99;
     width: 250px;
     height: 400px;
     text-align: center;
     color: #e47c5d;
-    display: inline-block;
     margin: 20px;
 }
 
@@ -84,17 +96,22 @@ main{
     height: 300px;
 }
 
+.contenedor-tarjetas-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .info h2{
     text-align: center;
     color: #e47c5d;
     margin: 20px;
 }
 
-.info div{
+.contenedor-tarjetas-info div{
     width: 250px;
     height: 400px;
     text-align: center;
-    display: inline-block;
     margin: 20px;
 }
 
@@ -108,12 +125,11 @@ main{
     color: #e47c5d ;
 }
 
-.nuevos-ingresos div{
+.contenedor-tarjetas div{
     border: 2px solid #ffcc99;
     width: 250px;
     height: 400px;
     text-align: center;
-    display: inline-block;
     margin: 20px;
 }
 
@@ -141,7 +157,6 @@ main{
     border: 2px solid #ffcc99;
     width: 350px;
     height: 500px;
-    display: inline-block;
     margin: 20px;
     text-align: center;
 }
@@ -179,7 +194,6 @@ main{
     border: 2px solid #ffcc99;
     width: 350px;
     height: 500px;
-    display: inline-block;
     margin: 20px;
     text-align: center;
 }
@@ -212,7 +226,6 @@ main{
     border: 2px solid #ffcc99;
     width: 350px;
     height: 500px;
-    display: inline-block;
     margin: 20px;
     text-align: center;
 }
@@ -307,12 +320,15 @@ main{
 }
 /*------------FOOTER---------------*/
 footer{
-    background-color: #142b3b;
+    background-color: #0a161f;
     font-family: 'Poppins', sans-serif;  
     color: #e47c5d; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-footer section img{
+footer div img{
     width: 50px;
     height: 50px;
 }
