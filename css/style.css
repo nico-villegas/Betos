@@ -45,6 +45,18 @@ main{
     background-color: #142b3b;
 }
 
+.grid-container-main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+
+    grid-template-areas: 
+    "productos"
+    "info"
+    "ingresos"
+    ;
+}
+
 .hero{
     width: 100%;
     height: 80vh;
@@ -70,16 +82,22 @@ main{
 }
 
 /**-------Index----------*/
-.contenedor-tarjetas{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/*------PRODUCTOS-------*/
+.productos{
+    grid-area: productos;
 }
 
 .productos h2{
     text-align: center;
     color: #e47c5d;
     margin: 20px;
+}
+
+.contenedor-tarjetas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contenedor-tarjetas div{
@@ -96,28 +114,37 @@ main{
     height: 300px;
 }
 
+/*----------INFO-----*/
+
+.info{
+    width: 1fr;
+    height: 400px;
+    grid-area: info;
+}
+
 .contenedor-tarjetas-info{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.info h2{
-    text-align: center;
-    color: #e47c5d;
-    margin: 20px;
-}
-
 .contenedor-tarjetas-info div{
     width: 250px;
-    height: 400px;
+    height: 250px;
     text-align: center;
     margin: 20px;
 }
 
-.info div img{
+.contenedor-tarjetas-info div img{
     width: 100px;
     height: 100px;
+}
+
+/*-------NUEVOS INGRESOS----------*/
+
+.nuevos-ingresos{
+    grid-area: ingresos;
 }
 
 .nuevos-ingresos h2{
@@ -319,16 +346,52 @@ main{
     padding: 4px;
 }
 /*------------FOOTER---------------*/
-footer{
-    background-color: #142e42;
+.grid-container-footer{
+    background-color: #0d1c27;
     font-family: 'Poppins', sans-serif;  
-    color: #e47c5d; 
-    display: flex;
+    
     justify-content: space-between;
+    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100px 50px;
+
+    grid-template-areas: 
+    "logo img"
+    "parrafo parrafo"
+    ;
+}
+.footer-link{
+    grid-area: logo;
+    display: flex;
     align-items: center;
 }
 
-footer div img{
+.footer-link a img{
+    width: 100px;
+    height: 100px;
+}
+
+.grid-footer-img{
+    grid-area: img;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.footer-img{
+    margin-right: 20px;
+}
+
+.footer-img img{
     width: 50px;
     height: 50px;
 }
+
+.footer-parrafo{
+    color: #ffcc99;
+    grid-area: parrafo;
+    display: flex;
+    justify-content: center;
+}
+
