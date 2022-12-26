@@ -25,33 +25,46 @@
     </header>
     <main>
         <h1 class="titulos-h1">Contactanos</h1>
-        <section>
-            <form action="" method="" enctype="" class="form-contacto">
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre">
+        <div class="container">
+            <form class="row g-3 m-3">
+                
+                <div class="col-6">
+                    <label for="inputName" class="form-control">Nombre</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Escribe tu Nombre">
                 </div>
-                <div>
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido">
+                
+                <div class="col-6">
+                    <label for="inputApellido" class="form-control">Apellido</label>
+                    <input type="text" class="form-control" id="inputApellido" placeholder="Escribe tu Apellido">
                 </div>
-                <div>
-                    <label for="correo">Correo</label>
-                    <input type="email" id="correo">
+                
+                <div class="col-12">
+                    <label for="inputEmail" class="form-control">Correo</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Ingrese su Correo">
                 </div>
-                <div>
-                    <label for="numero">Número</label>
-                    <input type="number" id="numero">
+
+                <div class="col-6">
+                    <label for="inputNumber" class="form-control">Celular</label>
+                    <input type="number" class="form-control" id="inputNumber" placeholder="Ingrese su Número">
                 </div>
-                <div>
-                    <h2>Escribinos un comentario</h2>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <div class="col-6">
+                    <label for="inputCiudad" class="form-control">Ciudad</label>
+                    <input type="text" class="form-control" id="inputCiudad" placeholder="Ingrese una ciudad">
                 </div>
-                <div>
-                    <input type="submit" class="submit">
+
+                <div class="col-12">
+                    <label for="comentarios" class="form-control">Deje aquí sus comentarios</label>
+                    <textarea class="form-control" rows="5" id="comentarios" name="comentarios" placeholder="Ingrese su comentario"></textarea>
+                </div>
+                
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">
+                        Enviar
+                    </button>
                 </div>
             </form>
-        </section>
+        </div>>
     </main>
     <footer class="grid-container-footer">
         <div class="footer-link">

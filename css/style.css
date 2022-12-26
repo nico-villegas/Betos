@@ -328,34 +328,20 @@ main{
 }
 
 /**-------Page Contacto---------*/
-.form-contacto{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.form-contacto div{
-    padding: 10px;
-}
-
-.form-contacto div label{
-    color: #ffcc99;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-.form-contacto div h2{
-    color: #e47c5d;
-    font-weight: 400;
-    font-size: 30px;
-}
-
-.submit{
-    color: #e47c5d;
-    background-color: #142b3b;
+.row div{
     border-color: #ffcc99;
-    padding: 4px;
+}
+
+.row div label{
+    color: #ffcc99;
+    background-color: #5ebdb256;
+    border-color:#5ebdb256;
+}
+
+.row div button{
+    background-color: #5ebdb256;
+    border-color: #5ebdb256;
+    color: #142b3b;
 }
 /*------------FOOTER---------------*/
 .grid-container-footer{
