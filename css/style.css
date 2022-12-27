@@ -45,6 +45,18 @@ main{
     background-color: #142b3b;
 }
 
+.grid-container-main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+
+    grid-template-areas: 
+    "productos"
+    "info"
+    "ingresos"
+    ;
+}
+
 .hero{
     width: 100%;
     height: 80vh;
@@ -63,80 +75,103 @@ main{
 .hero h1{
     font-size: 70px;
     font-weight: 600;
+    color: black;
 }
 
 .hero h2{
     font-size: 30px;
+    font-weight: 400;
+    color: black;
 }
 
 /**-------Index----------*/
+
+/*------PRODUCTOS-------*/
+.productos{
+    grid-area: productos;
+}
+
+.productos h2{
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: #e47c5d;
+    margin: 20px;
+}
+
 .contenedor-tarjetas{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.productos h2{
-    text-align: center;
-    color: #e47c5d;
-    margin: 20px;
-}
-
 .contenedor-tarjetas div{
     border: 2px solid #ffcc99;
     width: 250px;
     height: 400px;
-    text-align: center;
-    color: #e47c5d;
     margin: 20px;
 }
 
-.productos div img{
-    width: 250px;
+.contenedor-tarjetas div img{
+    width: 245px;
     height: 300px;
+}
+
+.contenedor-tarjetas div h3{
+    text-align: center;
+    color: #e47c5d;
+    font-weight: 500;
+    font-size: 25px;
+    margin: 10px;
+}
+
+/*----------INFO-----*/
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: info;
 }
 
 .contenedor-tarjetas-info{
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    flex-direction: row;
 
-.info h2{
-    text-align: center;
-    color: #e47c5d;
-    margin: 20px;
 }
 
 .contenedor-tarjetas-info div{
     width: 250px;
-    height: 400px;
+    height: 200px;
     text-align: center;
     margin: 20px;
 }
 
-.info div img{
+.contenedor-tarjetas-info div img{
     width: 100px;
     height: 100px;
 }
 
-.nuevos-ingresos h2{
-    text-align: center;
-    color: #e47c5d ;
+.contenedor-tarjetas-info div h3{
+    color: black;
+    font-weight: 400;
+    margin: 10px;
 }
 
-.contenedor-tarjetas div{
-    border: 2px solid #ffcc99;
-    width: 250px;
-    height: 400px;
+/*-------NUEVOS INGRESOS----------*/
+
+.nuevos-ingresos{
+    grid-area: ingresos;
+}
+
+.nuevos-ingresos h2{
     text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: #e47c5d;
     margin: 20px;
 }
 
-.nuevos-ingresos div img{
-    width: 250px;
-    height: 300px;
-}
 
 /**---------Productos-------------*/
 .titulos-h1{
@@ -146,39 +181,45 @@ main{
     color: #e47c5d;
 }
 /*---------Mates-------*/
-.mates .style-tarjetas h2{
+.mates h2{
     text-align: center;
     font-size: 32px;
     font-weight:400;
     color: #ffcc99;
     margin: 20px;
 }
-.mates .style-tarjetas div{
+
+.style-tarjetas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.style-tarjetas div{
     border: 2px solid #ffcc99;
     width: 350px;
     height: 500px;
     margin: 20px;
     text-align: center;
+    background-color: #0d1c27;
 }
 
-.mates .style-tarjetas div img{
-    width: 350px;
+.style-tarjetas div img{
+    width: 345px;
     height: 400px;
 }
 
-.mates .style-tarjetas div h3{
+.style-tarjetas div h3{
     color: #e47c5d;
+    text-align: center;
+    font-size: 20px;
+    font-weight:400;
 }
 
-.mates .style-tarjetas div a{
+.style-tarjetas div a{
     text-decoration: none;
     color:#141414 ;
     background-color:#ffcc99;
-}
-
-.mates .style-tarjetas .position-mate-camionero{ /*Esto lo hago para que la tarjeta este a nivel con las demás*/
-    position: relative;
-    top: 30px;
 }
 
 /*------Bombillas-------*/
@@ -190,29 +231,6 @@ main{
     margin: 20px;
 }
 
-.bombillas .style-tarjetas div{
-    border: 2px solid #ffcc99;
-    width: 350px;
-    height: 500px;
-    margin: 20px;
-    text-align: center;
-}
-
-.bombillas .style-tarjetas div img{
-    width: 350px;
-    height: 400px;
-}
-
-.bombillas .style-tarjetas div h3{
-    color: #e47c5d;
-}
-
-.bombillas .style-tarjetas div a{
-    text-decoration: none;
-    color:#141414 ;
-    background-color:#ffcc99;
-}
-
 /*------Yerberas---------*/
 .yerberas h2{
     text-align: center;
@@ -222,36 +240,21 @@ main{
     margin: 20px;
 }
 
-.yerberas .style-tarjetas div{
-    border: 2px solid #ffcc99;
-    width: 350px;
-    height: 500px;
-    margin: 20px;
-    text-align: center;
-}
-
-.yerberas .style-tarjetas div img{
-    width: 350px;
-    height: 400px;
-}
-
-.yerberas .style-tarjetas div h3{
-    color: #e47c5d;
-}
-
-.yerberas .style-tarjetas div a{
-    text-decoration: none;
-    color:#141414 ;
-    background-color:#ffcc99;
-}
-
-
 /**-----------Page Tips------------*/
 .titulo-tips-p{
     text-align: center;
     font-size: 20px;
     font-weight:300;
     color:#ffcc99;
+    margin: 10px;
+}
+
+.style-tips{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
 }
 
 .style-tips img{
@@ -264,6 +267,14 @@ main{
     font-size: 30px;
     font-weight: 600;
     color: #e47c5d;
+    margin: 20px;
+}
+
+.style-tips div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .style-tips div img{
@@ -274,23 +285,40 @@ main{
 .parrafos-tips{
     color:#ffcc99;
     font-weight: 200;
+    text-align: center;
 }
 
 /*-----------cebado de mate-----*/
-.subtitulo-tips{
-    color: #e47c5d;
-    font-size: 20px;
-    font-weight: 500;
+.cuidados{
+    height: 50vh;
 }
 
-.cuidados div ol{
-    list-style:decimal;
+.subtitulo-tips{
+    color: #e47c5d;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.cuidados div ul{
+    list-style:none;
 }
 
 /**---------Page Nosotros-----------*/
+.page-nosotros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .page-nosotros img{
     width: 500px;
     height: 500px;
+}
+
+.page-nosotros div{
+    padding: 20px;
 }
 
 .page-nosotros div p{
@@ -301,34 +329,108 @@ main{
 }
 
 /**-------Page Contacto---------*/
-.form-contacto div label{
-    color: #ffcc99;
-    font-weight: 400;
-}
-
-.form-contacto div h2{
-    color: #e47c5d;
-    font-weight: 400;
-    font-size: 30px;
-}
-
-.submit{
-    color: #e47c5d;
-    background-color: #142b3b;
+.row div{
     border-color: #ffcc99;
-    padding: 4px;
+}
+
+.row div label{
+    color: #ffcc99;
+    background-color: #5ebdb256;
+    border-color:#5ebdb256;
+}
+
+.row div button{
+    background-color: #5ebdb256;
+    border-color: #5ebdb256;
+    color: #142b3b;
 }
 /*------------FOOTER---------------*/
-footer{
-    background-color: #142e42;
+.grid-container-footer{
+    background-color: #0d1c27;
     font-family: 'Poppins', sans-serif;  
-    color: #e47c5d; 
-    display: flex;
+    
     justify-content: space-between;
+    
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100px 50px;
+
+    grid-template-areas: 
+    "logo img"
+    "parrafo parrafo"
+    ;
+}
+.footer-link{
+    grid-area: logo;
+    display: flex;
     align-items: center;
 }
 
-footer div img{
+.footer-link a img{
+    width: 100px;
+    height: 100px;
+}
+
+.grid-footer-img{
+    grid-area: img;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.footer-img{
+    margin-right: 20px;
+}
+
+.footer-img img{
     width: 50px;
     height: 50px;
+}
+
+.footer-parrafo{
+    color: #ffcc99;
+    grid-area: parrafo;
+    display: flex;
+    justify-content: center;
+}
+
+/**---- MEDIA QUERY--------*/
+@media screen and (max-width:875px){
+    .contenedor-tarjetas{   
+        flex-direction: column;
+    }
+    .contenedor-tarjetas-info{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:660px){
+    header{
+        flex-direction: column;
+    }
+    header nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:460px){
+    .footer-img img{
+        width: 35px;
+        height: 35px;
+    }
+    .footer-parrafo{
+        font-size: 10px;
+    }
+
+    .footer-link a img{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width:450px){
+    header nav ul li{
+        margin: 3px;
+    }
 }
