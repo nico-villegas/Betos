@@ -172,6 +172,7 @@ main{
     margin: 20px;
 }
 
+
 /**---------Productos-------------*/
 .titulos-h1{
     text-align: center;
@@ -289,7 +290,7 @@ main{
 
 /*-----------cebado de mate-----*/
 .cuidados{
-    height: 350px;
+    height: 50vh;
 }
 
 .subtitulo-tips{
@@ -393,3 +394,43 @@ main{
     justify-content: center;
 }
 
+/**---- MEDIA QUERY--------*/
+@media screen and (max-width:875px){
+    .contenedor-tarjetas{   
+        flex-direction: column;
+    }
+    .contenedor-tarjetas-info{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:660px){
+    header{
+        flex-direction: column;
+    }
+    header nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:460px){
+    .footer-img img{
+        width: 35px;
+        height: 35px;
+    }
+    .footer-parrafo{
+        font-size: 10px;
+    }
+
+    .footer-link a img{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width:450px){
+    header nav ul li{
+        margin: 3px;
+    }
+}
